@@ -490,3 +490,23 @@
     .pull-quote { padding: 20px; }
     .response-card { padding: 20px; }
   }
+
+  .essay-image {
+    margin: 40px 0;
+    border-left: 3px solid var(--gold);
+  }
+  
+  .essay-image img {
+    width: 100%;
+    display: block;
+    filter: grayscale(20%);
+  }
+  
+  .essay-image figcaption {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+    padding: 10px 14px;
+    background: rgba(201, 168, 76, 0.06);
+  }
