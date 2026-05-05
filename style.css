@@ -510,3 +510,156 @@
     padding: 10px 14px;
     background: rgba(201, 168, 76, 0.06);
   }
+
+  /* --- D3 ATTENDANCE CHART --- */
+.chart-container {
+  margin: 48px 0;
+  background: rgba(201, 168, 76, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 2px;
+  padding: 28px 24px 20px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.chart-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.chart-legend {
+  display: flex;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: rgba(245, 240, 232, 0.5);
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-met { background: var(--gold); }
+.legend-rbo { background: #a78bfa; }
+
+#attendance-chart {
+  width: 100%;
+  display: block;
+}
+
+.chart-source {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: rgba(245, 240, 232, 0.3);
+  margin-top: 14px;
+  margin-bottom: 0 !important;
+  line-height: 1.5;
+}
+
+.chart-axis text {
+  fill: rgba(245, 240, 232, 0.4);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+}
+
+.chart-axis line,
+.chart-axis path {
+  stroke: rgba(245, 240, 232, 0.1);
+}
+
+.chart-gridline {
+  stroke: rgba(245, 240, 232, 0.06);
+  stroke-dasharray: 3 4;
+}
+
+.chart-line-met {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2px;
+}
+
+.chart-line-rbo {
+  fill: none;
+  stroke: #a78bfa;
+  stroke-width: 2px;
+}
+
+.chart-dot-met { fill: var(--gold); }
+.chart-dot-rbo { fill: #a78bfa; }
+
+.chart-tooltip {
+  position: absolute;
+  background: #1e1b17;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 10px 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(245, 240, 232, 0.85);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  border-radius: 2px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.chart-annotation {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  fill: rgba(245, 240, 232, 0.35);
+  letter-spacing: 0.05em;
+}
+
+/* --- VIDEO EMBED --- */
+.embed-container {
+  margin: 40px 0;
+  border-left: 3px solid var(--gold);
+  padding-left: 20px;
+}
+
+.embed-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px !important;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
